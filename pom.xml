@@ -10,7 +10,7 @@
   <artifactId>vertx-http</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
-
+   
   <name>Vert.x - HTTP</name>
   <description>Exposes an HTTP API using Vert.x</description>
 
