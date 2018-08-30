@@ -149,6 +149,7 @@
       <activation />
     </profile>
 
+    
     <profile>
       <id>openshift-it</id>
       <build>
