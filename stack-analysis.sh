@@ -1,7 +1,6 @@
 
  
  echo "Generating effective POM.."
- cp /projects/vertx-http/pom.xml /projects/vertx-http/epom.xml
  mvn help:effective-pom -f  "/projects/vertx-http/epom.xml" -Doutput="/projectsvertx-http/pom.xml" &> /projects/vertx-http/outfile
  echo "Analyzing your application stack.."
  
