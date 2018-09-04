@@ -5,4 +5,4 @@
  echo "Analyzing your application stack.."
  
  
-curl -X POST    -F 'manifest=@/projects/vertx-http/pom.xml' 192.168.225.126:7000/stack-analysis 2> /projects/vertx-http/errorlog
+curl -X POST    -F 'manifest=@/projects/vertx-http/pom.xml' 23.251.159.157:7000/stack-analysis 2> /projects/vertx-http/errorlog
