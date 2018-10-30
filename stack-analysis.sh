@@ -42,16 +42,18 @@ else
     manifest=$f
 fi
 
+set -x
+
 # Environment Variables to be used for user_key and api_url
 user_key='250f7573417ff52aee50728f698ecd96'
 api_url='https://friendly_system_service-2445582075730.production.gw.apicast.io:443/api/v1/stack-analyses/'
 
 manifest='@'$manifest
-output=`curl -s -X POST -H"user-key: $user_key" -F "manifest[]=$manifest" -F"filePath[]=$p"  $api_url`
+output=`curl -s -X POST -F "manifest[]=$manifest" -F"filePath[]=$p"  $api_url?user_key=$THREESCALE_USER_KEY`
 id=`echo $output|python -c "import sys, json; print(json.load(sys.stdin)['id'])"`
 
 sleep 5
 
-get_cmd="$api_url/$id"
-curl -H"user-key: $user_key" -s $get_cmd | sed 's/"//g' | sed 's/\\t/    /g' | sed 's/\\n/ \
+get_cmd="$api_url/$id?user_key=$THREESCALE_USER_KEY"
+curl -s $get_cmd | sed 's/"//g' | sed 's/\\t/    /g' | sed 's/\\n/ \
 /g'

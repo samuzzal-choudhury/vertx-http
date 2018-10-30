@@ -8,28 +8,31 @@ import datetime as dt
 import json
 from collections import namedtuple
 
-app = Flask(__name__)
+#app = Flask(__name__)
 
 
-@app.route('/stack-analysis', methods=['GET', 'POST'])
+#@app.route('/stack-analysis', methods=['GET', 'POST'])
 def hello():
-    request.files['manifest'].save('/tmp/pom.xml')
-    analyticsurl = "https://recommender.api.openshift.io/api/v1/stack-analyses"
-    data = {'app' : 'aaaaa'}
-    uploadfile = "/tmp/file"
-    files = {'manifest[]' : open('/tmp/pom.xml', 'rb')}
-    payload = {'filePath[]' : 'home/JohnDoe'}
-    res = requests.post(analyticsurl, files=files, headers=header,  params=payload)
-    json_response_for_trigger = json.loads(res.text)
-    stack_analysis_id = json_response_for_trigger['id']
+    #request.files['manifest'].save('/tmp/pom.xml')
+    analyticsurl = "https://friendly_system_service-2445582075730.staging.gw.apicast.io:443"
+    #data = {'app' : 'aaaaa'}
+    #uploadfile = "/tmp/file"
+    #files = {'manifest[]' : open('/tmp/pom.xml', 'rb')}
+    #payload = {'filePath[]' : 'home/JohnDoe'}
+    #res = requests.post(analyticsurl, files=files, headers=header,  params=payload)
+    #json_response_for_trigger = json.loads(res.text)
+    #stack_analysis_id = json_response_for_trigger['id']
+    stack_analysis_id = '0e00153c7c664b9ca72e669d827c32f8'
 
     time.sleep (20.0)
 
-    retrieve_stack_report_url = "https://recommender.api.openshift.io/api/v1/stack-analyses/"
+    retrieve_stack_report_url = "{}/api/v1/stack-analyses/".format(analyticsurl)
     retrieve_stack_report_url += stack_analysis_id
-    stack_report_response = requests.get(retrieve_stack_report_url,  headers=header)
+    retrieve_stack_report_url += "?user_key=250f7573417ff52aee50728f698ecd96"
+    print (retrieve_stack_report_url)
+    stack_report_response = requests.get(retrieve_stack_report_url)
     json_stack_report = json.loads(stack_report_response.text)
-    print (json.dumps(json_stack_report))
+    #print (json.dumps(json_stack_report))
     
     response_to_client = "\nSummary of Application stack report generated at : "
     response_to_client += json_stack_report["finished_at"]
@@ -93,9 +96,11 @@ def hello():
     response_to_client += "\n5) NO alternative  application depedencies been suggested\n\t"
     print (response_to_client)
     
-    url = 'https://stack-analytics-report.openshift.io/#/analyze/00520cb3bbf34717824e7fa123940f62?api_data={ "access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjBsTDB2WHM5WVJWcVpNb3d5dzh1TkxSX3lyMGlGYW96ZFFrOXJ6cTJPVlUiLCJ0eXAiOiJKV1QifQ.eyJhY3IiOiIwIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vYXV0aC5vcGVuc2hpZnQuaW8iLCJodHRwczovL29wZW5zaGlmdC5pbyJdLCJhcHByb3ZlZCI6dHJ1ZSwiYXVkIjoiZmFicmljOC1vbmxpbmUtcGxhdGZvcm0iLCJhdXRoX3RpbWUiOjE1MzUwMDQxNzcsImF6cCI6ImZhYnJpYzgtb25saW5lLXBsYXRmb3JtIiwiZW1haWwiOiJqYWt1bWFyQHJlZGhhdC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZXhwIjoxNTM3NTk2MTc3LCJmYW1pbHlfbmFtZSI6Ikt1bWFyIiwiZ2l2ZW5fbmFtZSI6ImphaXZhcmRoYW4iLCJpYXQiOjE1MzUwMDQxNzcsImlzcyI6Imh0dHBzOi8vc3NvLm9wZW5zaGlmdC5pby9hdXRoL3JlYWxtcy9mYWJyaWM4IiwianRpIjoiYTI5MDNjNjUtZDE1MS00YTMxLTkxMGMtMmRjY2ExODFkMGE4IiwibmFtZSI6ImphaXZhcmRoYW4gS3VtYXIiLCJuYmYiOjAsInByZWZlcnJlZF91c2VybmFtZSI6Impha3VtYXIiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX0sImJyb2tlciI6eyJyb2xlcyI6WyJyZWFkLXRva2VuIl19fSwic2Vzc2lvbl9zdGF0ZSI6ImNiMTk5NmZjLWY0ZmItNDJlMS04MTI4LTg2NjdlN2E5NDU5NSIsInN1YiI6ImMwNGRiYzQ2LWVjZmQtNDc4ZC1iM2E1LWQ5ODkzZDEyNjM4OCIsInR5cCI6IkJlYXJlciJ9.V9jxAztuTlfPTqbHFmRi307plL_0uPU42iUpPcTt-ahk5d50vVAT2rAb4Y5HicO69mpnySEtNOqDzBnLqEfzqtKvLgOC47ARqyj68HJVYyV-PDjucrR7fgdswY4QXCYy-NyBbjdJFSoi6DcuNwhE8jNpCHy_kEOyu93C5uIzAVnzxbZuxqJ_xKMzFhrZD99Gr1rMPQJSBum1XuW-mUYA3cbqkOAZsimAwl_UidVPHzkhLcAgH26jT2TDqAMFgpb9fGFWkX9ScuWDO_3c_M1v5j9Dtvia05Qaiwuyigk4Xxxeg-JMCdlfle6j8u96FmXeiwPbrKbxzLql25cqPcz9ng", "route_config": "api_url": "https://recommender.api.openshift.io/" } }'
-    display_url = '<a href= '+ url + '> click here <\a>'
-    return display_url
+    #url = 'https://stack-analytics-report.openshift.io/#/analyze/00520cb3bbf34717824e7fa123940f62?api_data={ "access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjBsTDB2WHM5WVJWcVpNb3d5dzh1TkxSX3lyMGlGYW96ZFFrOXJ6cTJPVlUiLCJ0eXAiOiJKV1QifQ.eyJhY3IiOiIwIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vYXV0aC5vcGVuc2hpZnQuaW8iLCJodHRwczovL29wZW5zaGlmdC5pbyJdLCJhcHByb3ZlZCI6dHJ1ZSwiYXVkIjoiZmFicmljOC1vbmxpbmUtcGxhdGZvcm0iLCJhdXRoX3RpbWUiOjE1MzUwMDQxNzcsImF6cCI6ImZhYnJpYzgtb25saW5lLXBsYXRmb3JtIiwiZW1haWwiOiJqYWt1bWFyQHJlZGhhdC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZXhwIjoxNTM3NTk2MTc3LCJmYW1pbHlfbmFtZSI6Ikt1bWFyIiwiZ2l2ZW5fbmFtZSI6ImphaXZhcmRoYW4iLCJpYXQiOjE1MzUwMDQxNzcsImlzcyI6Imh0dHBzOi8vc3NvLm9wZW5zaGlmdC5pby9hdXRoL3JlYWxtcy9mYWJyaWM4IiwianRpIjoiYTI5MDNjNjUtZDE1MS00YTMxLTkxMGMtMmRjY2ExODFkMGE4IiwibmFtZSI6ImphaXZhcmRoYW4gS3VtYXIiLCJuYmYiOjAsInByZWZlcnJlZF91c2VybmFtZSI6Impha3VtYXIiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX0sImJyb2tlciI6eyJyb2xlcyI6WyJyZWFkLXRva2VuIl19fSwic2Vzc2lvbl9zdGF0ZSI6ImNiMTk5NmZjLWY0ZmItNDJlMS04MTI4LTg2NjdlN2E5NDU5NSIsInN1YiI6ImMwNGRiYzQ2LWVjZmQtNDc4ZC1iM2E1LWQ5ODkzZDEyNjM4OCIsInR5cCI6IkJlYXJlciJ9.V9jxAztuTlfPTqbHFmRi307plL_0uPU42iUpPcTt-ahk5d50vVAT2rAb4Y5HicO69mpnySEtNOqDzBnLqEfzqtKvLgOC47ARqyj68HJVYyV-PDjucrR7fgdswY4QXCYy-NyBbjdJFSoi6DcuNwhE8jNpCHy_kEOyu93C5uIzAVnzxbZuxqJ_xKMzFhrZD99Gr1rMPQJSBum1XuW-mUYA3cbqkOAZsimAwl_UidVPHzkhLcAgH26jT2TDqAMFgpb9fGFWkX9ScuWDO_3c_M1v5j9Dtvia05Qaiwuyigk4Xxxeg-JMCdlfle6j8u96FmXeiwPbrKbxzLql25cqPcz9ng", "route_config": "api_url": "https://recommender.api.openshift.io/" } }'
+    #display_url = '<a href= '+ url + '> click here <\a>'
+    #return display_url
     
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=7000)
+#if __name__ == '__main__':
+#    app.run(host='0.0.0.0', port=7000)
+
+hello()
