@@ -45,7 +45,6 @@ fi
 set -x
 
 # Environment Variables to be used for user_key and api_url
-user_key='250f7573417ff52aee50728f698ecd96'
 api_url='https://friendly_system_service-2445582075730.production.gw.apicast.io:443/api/v1/stack-analyses/'
 
 manifest='@'$manifest
