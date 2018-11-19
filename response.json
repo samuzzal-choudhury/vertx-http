@@ -1,0 +1,590 @@
+{
+    "release": "None:None:None",
+    "version": "v1",
+    "result": [
+        {
+            "recommendation": {
+                "alternate": [],
+                "companion": [
+                    {
+                        "osio_user_count": 0,
+                        "ecosystem": "maven",
+                        "confidence_reason": 77.61194029850746,
+                        "name": "io.vertx:vertx-web-client",
+                        "cooccurrence_count": 208,
+                        "cooccurrence_probability": 77.61194029850746,
+                        "github": {
+                            "latest_release_duration": "2018-07-03 06:39:05",
+                            "issues": {
+                                "year": {
+                                    "closed": -1,
+                                    "opened": -1
+                                },
+                                "month": {
+                                    "closed": -1,
+                                    "opened": -1
+                                }
+                            },
+                            "dependent_projects": "7",
+                            "total_releases": "12",
+                            "forks_count": -1,
+                            "contributors": -1,
+                            "first_release_date": "N/A",
+                            "stargazers_count": -1,
+                            "dependent_repos": "4629",
+                            "used_by": [
+                                {
+                                    "stars": 0,
+                                    "name": "SIMPATICOProject/CPD"
+                                },
+                                {
+                                    "stars": 1,
+                                    "name": "Stwissel/vertx-sfdc-platformevents"
+                                },
+                                {
+                                    "stars": 0,
+                                    "name": "openshiftio-vertx-boosters/vertx-configmap-booster"
+                                },
+                                {
+                                    "stars": 0,
+                                    "name": "openshiftio-vertx-boosters/vertx-http-booster"
+                                },
+                                {
+                                    "stars": 1,
+                                    "name": "pie-ai/prometheus-proxy"
+                                },
+                                {
+                                    "stars": 39,
+                                    "name": "redhat-developer/reactive-microservices-in-java"
+                                },
+                                {
+                                    "stars": 1,
+                                    "name": "the-big-bang-theory/leonard"
+                                },
+                                {
+                                    "stars": 1,
+                                    "name": "the-big-bang-theory/stuart"
+                                },
+                                {
+                                    "stars": 53,
+                                    "name": "vert-x3/vertx-service-discovery"
+                                },
+                                {
+                                    "stars": 0,
+                                    "name": "yunyu/vertx-web"
+                                }
+                            ],
+                            "size": "N/A",
+                            "watchers": -1,
+                            "pull_requests": {
+                                "year": {
+                                    "closed": -1,
+                                    "opened": -1
+                                },
+                                "month": {
+                                    "closed": -1,
+                                    "opened": -1
+                                }
+                            }
+                        },
+                        "licenses": [
+                            "Eclipse Public License - v 1.0",
+                            "The Apache Software License, Version 2.0"
+                        ],
+                        "version": "3.6.0.CR1",
+                        "code_metrics": {
+                            "code_lines": -1,
+                            "total_files": -1,
+                            "average_cyclomatic_complexity": -1
+                        },
+                        "latest_version": "3.6.0.CR1",
+                        "reason": "Package io.vertx:vertx-web-client appears in 208 different stacks along with the provided input stack. Do you want to consider adding this Package?",
+                        "security": [],
+                        "topic_list": [
+                            "http-request",
+                            "http",
+                            "vertx-web-client",
+                            "http-response"
+                        ]
+                    },
+                    {
+                        "osio_user_count": 0,
+                        "ecosystem": "maven",
+                        "confidence_reason": 82.46268656716418,
+                        "name": "org.slf4j:slf4j-api",
+                        "cooccurrence_count": 221,
+                        "cooccurrence_probability": 82.46268656716418,
+                        "github": {
+                            "latest_release_duration": "2018-03-21 22:01:42",
+                            "issues": {
+                                "year": {
+                                    "closed": -1,
+                                    "opened": -1
+                                },
+                                "month": {
+                                    "closed": -1,
+                                    "opened": -1
+                                }
+                            },
+                            "dependent_projects": "10432",
+                            "total_releases": "66",
+                            "forks_count": -1,
+                            "contributors": -1,
+                            "first_release_date": "N/A",
+                            "stargazers_count": -1,
+                            "dependent_repos": "111974",
+                            "used_by": [
+                                {
+                                    "stars": 15450,
+                                    "name": "apache/spark"
+                                },
+                                {
+                                    "stars": 6200,
+                                    "name": "dropwizard/dropwizard"
+                                },
+                                {
+                                    "stars": 5377,
+                                    "name": "dropwizard/metrics"
+                                },
+                                {
+                                    "stars": 1723,
+                                    "name": "eclipse/jetty.project"
+                                },
+                                {
+                                    "stars": 421,
+                                    "name": "hibernate/hibernate-validator"
+                                },
+                                {
+                                    "stars": 12051,
+                                    "name": "netty/netty"
+                                },
+                                {
+                                    "stars": 885,
+                                    "name": "qos-ch/slf4j"
+                                },
+                                {
+                                    "stars": 660,
+                                    "name": "resteasy/Resteasy"
+                                },
+                                {
+                                    "stars": 5395,
+                                    "name": "rzwitserloot/lombok"
+                                },
+                                {
+                                    "stars": 2042,
+                                    "name": "spring-projects/spring-security"
+                                }
+                            ],
+                            "size": "N/A",
+                            "watchers": -1,
+                            "pull_requests": {
+                                "year": {
+                                    "closed": -1,
+                                    "opened": -1
+                                },
+                                "month": {
+                                    "closed": -1,
+                                    "opened": -1
+                                }
+                            }
+                        },
+                        "licenses": [
+                            "MIT License"
+                        ],
+                        "version": "1.8.0-beta2",
+                        "code_metrics": {
+                            "code_lines": -1,
+                            "total_files": -1,
+                            "average_cyclomatic_complexity": -1
+                        },
+                        "latest_version": "1.8.0-beta2",
+                        "reason": "Package org.slf4j:slf4j-api appears in 221 different stacks along with the provided input stack. Do you want to consider adding this Package?",
+                        "security": [],
+                        "topic_list": [
+                            "logging",
+                            "dependency-injection",
+                            "api"
+                        ]
+                    },
+                    {
+                        "osio_user_count": 0,
+                        "ecosystem": "maven",
+                        "confidence_reason": 77.23880597014924,
+                        "name": "org.apache.logging.log4j:log4j-core",
+                        "cooccurrence_count": 207,
+                        "cooccurrence_probability": 77.23880597014924,
+                        "github": {
+                            "latest_release_duration": "2018-07-23 03:46:14",
+                            "issues": {
+                                "year": {
+                                    "closed": -1,
+                                    "opened": -1
+                                },
+                                "month": {
+                                    "closed": -1,
+                                    "opened": -1
+                                }
+                            },
+                            "dependent_projects": "1196",
+                            "total_releases": "34",
+                            "forks_count": -1,
+                            "contributors": -1,
+                            "first_release_date": "N/A",
+                            "stargazers_count": -1,
+                            "dependent_repos": "16513",
+                            "used_by": [
+                                {
+                                    "stars": 8765,
+                                    "name": "alibaba/druid"
+                                },
+                                {
+                                    "stars": 2859,
+                                    "name": "apache/flink"
+                                },
+                                {
+                                    "stars": 575,
+                                    "name": "belaban/JGroups"
+                                },
+                                {
+                                    "stars": 6781,
+                                    "name": "eclipse/vert.x"
+                                },
+                                {
+                                    "stars": 8271,
+                                    "name": "elastic/logstash"
+                                },
+                                {
+                                    "stars": 524,
+                                    "name": "mulesoft/mule"
+                                },
+                                {
+                                    "stars": 6211,
+                                    "name": "mybatis/mybatis-3"
+                                },
+                                {
+                                    "stars": 11878,
+                                    "name": "netty/netty"
+                                },
+                                {
+                                    "stars": 646,
+                                    "name": "resteasy/Resteasy"
+                                },
+                                {
+                                    "stars": 5427,
+                                    "name": "xetorthio/jedis"
+                                }
+                            ],
+                            "size": "N/A",
+                            "watchers": -1,
+                            "pull_requests": {
+                                "year": {
+                                    "closed": -1,
+                                    "opened": -1
+                                },
+                                "month": {
+                                    "closed": -1,
+                                    "opened": -1
+                                }
+                            }
+                        },
+                        "licenses": [
+                            "Apache License, Version 2.0"
+                        ],
+                        "version": "2.11.1",
+                        "code_metrics": {
+                            "code_lines": -1,
+                            "total_files": -1,
+                            "average_cyclomatic_complexity": -1
+                        },
+                        "latest_version": "2.11.1",
+                        "reason": "Package org.apache.logging.log4j:log4j-core appears in 207 different stacks along with the provided input stack. Do you want to consider adding this Package?",
+                        "security": [],
+                        "topic_list": [
+                            "java",
+                            "logging"
+                        ]
+                    }
+                ],
+                "usage_outliers": [],
+                "missing_packages_pgm": [],
+                "input_stack_topics": {
+                    "io.vertx:vertx-web": [
+                        "event-bus",
+                        "jwt",
+                        "webapp",
+                        "routing"
+                    ],
+                    "io.vertx:vertx-core": [
+                        "http",
+                        "socket",
+                        "cluster",
+                        "reactive"
+                    ]
+                },
+                "manifest_file_path": "/home/sam"
+            },
+            "manifest_name": "pom.xml",
+            "manifest_file_path": "/home/sam",
+            "user_stack_info": {
+                "analyzed_dependencies_count": 2,
+                "total_licenses": 2,
+                "stack_license_conflict": false,
+                "recommendation_ready": true,
+                "ecosystem": "maven",
+                "unknown_dependencies": [],
+                "license_analysis": {
+                    "conflict_packages": [],
+                    "f8a_stack_licenses": [
+                        "epl 1.0"
+                    ],
+                    "unknown_licenses": {
+                        "really_unknown": [],
+                        "component_conflict": []
+                    },
+                    "current_stack_license": {},
+                    "status": "Successful",
+                    "outlier_packages": []
+                },
+                "unknown_dependencies_count": 0,
+                "analyzed_dependencies": [
+                    {
+                        "license_analysis": {
+                            "conflict_licenses": [],
+                            "unknown_licenses": [],
+                            "outlier_licenses": [],
+                            "status": "Successful",
+                            "synonyms": {
+                                "EPL 1.0": "epl 1.0",
+                                "Apache 2.0": "apache 2.0"
+                            },
+                            "_message": "Representative license found",
+                            "_representative_licenses": "epl 1.0"
+                        },
+                        "github": {
+                            "latest_release_duration": "2018-07-03 06:35:31",
+                            "issues": {
+                                "year": {
+                                    "closed": -1,
+                                    "opened": -1
+                                },
+                                "month": {
+                                    "closed": -1,
+                                    "opened": -1
+                                }
+                            },
+                            "dependent_projects": "219",
+                            "total_releases": "55",
+                            "forks_count": 1447,
+                            "contributors": 30,
+                            "open_issues_count": 175,
+                            "first_release_date": "Apr 16, 2010",
+                            "stargazers_count": 8713,
+                            "dependent_repos": "6978",
+                            "used_by": [
+                                {
+                                    "stars": 2976,
+                                    "name": "TechEmpower/FrameworkBenchmarks"
+                                },
+                                {
+                                    "stars": 366,
+                                    "name": "apiman/apiman"
+                                },
+                                {
+                                    "stars": 474,
+                                    "name": "boonproject/boon"
+                                },
+                                {
+                                    "stars": 132,
+                                    "name": "hawkular/hawkular-apm"
+                                },
+                                {
+                                    "stars": 342,
+                                    "name": "isaiah/jubilee"
+                                },
+                                {
+                                    "stars": 77,
+                                    "name": "jbosstm/narayana"
+                                },
+                                {
+                                    "stars": 1981,
+                                    "name": "jhalterman/failsafe"
+                                },
+                                {
+                                    "stars": 78,
+                                    "name": "vert-x3/vertx-stack"
+                                },
+                                {
+                                    "stars": 204,
+                                    "name": "wildfly-swarm/wildfly-swarm"
+                                },
+                                {
+                                    "stars": 72,
+                                    "name": "wisdom-framework/wisdom"
+                                }
+                            ],
+                            "size": "N/A",
+                            "pull_requests": {
+                                "year": {
+                                    "closed": -1,
+                                    "opened": -1
+                                },
+                                "month": {
+                                    "closed": -1,
+                                    "opened": -1
+                                }
+                            }
+                        },
+                        "licenses": [
+                            "Apache 2.0",
+                            "EPL 1.0"
+                        ],
+                        "name": "io.vertx:vertx-core",
+                        "ecosystem": "maven",
+                        "code_metrics": {
+                            "code_lines": -1,
+                            "total_files": -1,
+                            "average_cyclomatic_complexity": -1
+                        },
+                        "latest_version": "3.5.3.CR1",
+                        "topic_list": [
+                            "http",
+                            "socket",
+                            "cluster",
+                            "reactive"
+                        ],
+                        "security": [],
+                        "version": "3.5.1.redhat-003",
+                        "osio_user_count": 0
+                    },
+                    {
+                        "license_analysis": {
+                            "conflict_licenses": [],
+                            "unknown_licenses": [],
+                            "outlier_licenses": [],
+                            "status": "Successful",
+                            "synonyms": {
+                                "EPL 1.0": "epl 1.0",
+                                "Apache 2.0": "apache 2.0"
+                            },
+                            "_message": "Representative license found",
+                            "_representative_licenses": "epl 1.0"
+                        },
+                        "github": {
+                            "latest_release_duration": "2018-05-28 11:46:58",
+                            "issues": {
+                                "year": {
+                                    "closed": -1,
+                                    "opened": -1
+                                },
+                                "month": {
+                                    "closed": -1,
+                                    "opened": -1
+                                }
+                            },
+                            "dependent_projects": "33",
+                            "total_releases": "21",
+                            "forks_count": -1,
+                            "contributors": -1,
+                            "open_issues_count": -1,
+                            "first_release_date": "Apr 16, 2010",
+                            "stargazers_count": -1,
+                            "dependent_repos": "5415",
+                            "used_by": [
+                                {
+                                    "stars": 5,
+                                    "name": "BraintagsGmbH/NetRelay"
+                                },
+                                {
+                                    "stars": 0,
+                                    "name": "gi0baro/FrameworkBenchmarks"
+                                },
+                                {
+                                    "stars": 74,
+                                    "name": "pac4j/vertx-pac4j"
+                                },
+                                {
+                                    "stars": 348,
+                                    "name": "prometheus/client_java"
+                                },
+                                {
+                                    "stars": 39,
+                                    "name": "redhat-developer/reactive-microservices-in-java"
+                                },
+                                {
+                                    "stars": 35,
+                                    "name": "vert-x3/vertx-hazelcast"
+                                },
+                                {
+                                    "stars": 19,
+                                    "name": "vert-x3/vertx-ignite"
+                                },
+                                {
+                                    "stars": 53,
+                                    "name": "vert-x3/vertx-service-discovery"
+                                },
+                                {
+                                    "stars": 45,
+                                    "name": "vert-x3/vertx-zookeeper"
+                                },
+                                {
+                                    "stars": 23,
+                                    "name": "voyages-sncf-technologies/tock"
+                                }
+                            ],
+                            "size": "N/A",
+                            "pull_requests": {
+                                "year": {
+                                    "closed": -1,
+                                    "opened": -1
+                                },
+                                "month": {
+                                    "closed": -1,
+                                    "opened": -1
+                                }
+                            }
+                        },
+                        "licenses": [
+                            "Apache 2.0",
+                            "EPL 1.0"
+                        ],
+                        "name": "io.vertx:vertx-web",
+                        "ecosystem": "maven",
+                        "code_metrics": {
+                            "code_lines": -1,
+                            "total_files": -1,
+                            "average_cyclomatic_complexity": -1
+                        },
+                        "latest_version": "3.5.2.CR3",
+                        "topic_list": [
+                            "event-bus",
+                            "jwt",
+                            "webapp",
+                            "routing"
+                        ],
+                        "security": [],
+                        "version": "3.5.1.redhat-003",
+                        "osio_user_count": 0
+                    }
+                ],
+                "distinct_licenses": [
+                    "EPL 1.0",
+                    "Apache 2.0"
+                ],
+                "dependencies": [
+                    {
+                        "package": "io.vertx:vertx-core",
+                        "version": "3.5.1.redhat-003"
+                    },
+                    {
+                        "package": "io.vertx:vertx-web",
+                        "version": "3.5.1.redhat-003"
+                    }
+                ]
+            }
+        }
+    ],
+    "started_at": "2018-11-19T11:41:53.660076",
+    "finished_at": "2018-11-19T11:41:53.754898",
+    "request_id": "0ab73abbc1a74038a0edd838efbe6ffb"
+}
+
